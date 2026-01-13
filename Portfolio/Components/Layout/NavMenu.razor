@@ -1,11 +1,13 @@
 ﻿<nav class="portfolio-navbar @(IsDark ? "is-dark" : "is-light")">
     <div class="portfolio-brand">
-        <a href="/">Yasser Rezai</a>
+        <a href="#home" class="brand-mark">YR</a>
     </div>
     <div class="portfolio-links">
-        <NavLink href="/profiel">Profiel</NavLink>
-        <NavLink href="/opleiding">Opleiding</NavLink>
-        <NavLink href="/contact">Contact</NavLink>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
         <button class="theme-switch" type="button" @onclick="OnToggleTheme" aria-pressed="@IsDark" aria-label="Toggle dark mode">
             <span class="theme-icon" aria-hidden="true">
                 <svg class="icon-moon" viewBox="0 0 24 24" role="img" focusable="false">

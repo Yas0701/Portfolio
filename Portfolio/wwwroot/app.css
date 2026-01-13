@@ -1,5 +1,7 @@
-html, body {
+﻿html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
 }
 
 a, .btn-link {
@@ -57,4 +59,116 @@ h1:focus {
 
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
     text-align: start;
+}
+
+.home-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 3rem 0 4rem;
+}
+
+.hero-text {
+    max-width: 540px;
+}
+
+.hero-intro {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-role {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #dc2626;
+    margin-top: 0.5rem;
+}
+
+.hero-summary {
+    margin: 1.25rem 0 1.75rem;
+    color: #475569;
+}
+
+.primary-button {
+    display: inline-block;
+    padding: 0.65rem 1.6rem;
+    border-radius: 999px;
+    background: #dc2626;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.content-section {
+    padding: 3rem 0;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #dc2626;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.4rem;
+    width: 60px;
+    height: 3px;
+    background: #dc2626;
+}
+
+.skills-grid,
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.25rem;
+}
+
+.skill-card,
+.project-card {
+    padding: 1.25rem;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.project-card h3 {
+    margin-top: 0;
+}
+
+.page.theme-dark .hero-summary {
+    color: #cbd5f5;
+}
+
+.page.theme-dark .primary-button {
+    background: #ef4444;
+}
+
+.page.theme-dark .section-title,
+.page.theme-dark .section-title::after {
+    color: #f87171;
+    background: #f87171;
+}
+
+.page.theme-dark .skill-card,
+.page.theme-dark .project-card {
+    background: #111827;
+    border-color: rgba(148, 163, 184, 0.2);
+    box-shadow: none;
+}
+
+@media (max-width: 900px) {
+    .home-hero {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
