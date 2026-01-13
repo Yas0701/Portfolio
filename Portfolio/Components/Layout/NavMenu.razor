@@ -1,30 +1,33 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="">Portfolio</a>
+﻿<nav class="portfolio-navbar @(IsDark ? "is-dark" : "is-light")">
+    <div class="portfolio-brand">
+        <a href="/">Yasser Rezai</a>
     </div>
-</div>
+    <div class="portfolio-links">
+        <NavLink href="/profiel">Profiel</NavLink>
+        <NavLink href="/opleiding">Opleiding</NavLink>
+        <NavLink href="/contact">Contact</NavLink>
+        <button class="theme-switch" type="button" @onclick="OnToggleTheme" aria-pressed="@IsDark" aria-label="Toggle dark mode">
+            <span class="theme-icon" aria-hidden="true">
+                <svg class="icon-moon" viewBox="0 0 24 24" role="img" focusable="false">
+                    <path fill="currentColor" d="M15.5 2.5a9.5 9.5 0 0 0 0 19 9.5 9.5 0 0 1-7-9.2 9.5 9.5 0 0 1 7-9.8z" />
+                </svg>
+            </span>
+            <span class="theme-track" aria-hidden="true">
+                <span class="theme-thumb"></span>
+            </span>
+            <span class="theme-icon" aria-hidden="true">
+                <svg class="icon-sun" viewBox="0 0 24 24" role="img" focusable="false">
+                    <path fill="currentColor" d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0-5 1.5 3.5H10.5L12 2zm0 20-1.5-3.5h3L12 22zM2 12l3.5-1.5v3L2 12zm20 0-3.5 1.5v-3L22 12zm-3.8-6.2 3.1-1.2-1.9 2.8-1.2-1.6zM5.7 18.4l-3.1 1.2 1.9-2.8 1.2 1.6zm12.7 1.2-1.2-1.6 3.1 1.2-1.9 0.4zM5.7 5.6 2.6 4.4l1.9 2.8 1.2-1.6z" />
+                </svg>
+            </span>
+        </button>
+    </div>
+</nav>
 
-<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
+@code {
+    [Parameter]
+    public bool IsDark { get; set; }
 
-<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
-    <nav class="nav flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
-
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Counter
-            </NavLink>
-        </div>
-
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="weather">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
-            </NavLink>
-        </div>
-    </nav>
-</div>
-
+    [Parameter]
+    public EventCallback OnToggleTheme { get; set; }
+}
