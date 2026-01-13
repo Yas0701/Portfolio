@@ -7,6 +7,9 @@
 
 .page.theme-light {
     background-color: #f8fafc;
+    background-image: radial-gradient(circle at top, rgba(220, 38, 38, 0.08), transparent 55%),
+        radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.08), transparent 50%),
+        linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
     color: #0f172a;
 }
 
@@ -16,7 +19,10 @@
 
 .page.theme-dark {
     background-color: #0b1120;
-    color: #e2e8f0;
+    background-image: radial-gradient(circle at 15% 20%, rgba(248, 113, 113, 0.15), transparent 45%),
+        radial-gradient(circle at 80% 10%, rgba(56, 189, 248, 0.12), transparent 40%),
+        linear-gradient(180deg, #0b1120 0%, #0f172a 100%);
+    color: #f8fafc;
 }
 
 .page.theme-dark a {
