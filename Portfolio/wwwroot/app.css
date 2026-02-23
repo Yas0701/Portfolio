@@ -159,9 +159,11 @@ h1:focus {
     background: var(--accent-strong);
 }
 
-.page.theme-dark .section-title,
-.page.theme-dark .section-title::after {
+.page.theme-dark .section-title {
     color: var(--accent-soft);
+}
+
+.page.theme-dark .section-title::after {
     background: var(--accent-soft);
 }
 
